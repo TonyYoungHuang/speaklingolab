@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive hub for learning world languages with curated free and premium resources">
+    <title>Global Language Learning Hub</title>
+    <style>
+        :root {
+            --primary: #007AFF;
+            --secondary: #5856D6;
+            --background: #F2F2F7;
+            --card: #FFFFFF;
+            --text: #1C1C1E;
+            --muted: #86868B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--card);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .language-filter {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 20px;
+            background: var(--card);
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .language-card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .language-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .language-title {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resource-list {
+            list-style: none;
+        }
+
+        .resource-item {
+            margin: 0.75rem 0;
+            border-bottom: 1px solid var(--background);
+            padding-bottom: 0.75rem;
+        }
+
+        .resource-item:last-child {
+            border-bottom: none;
+        }
+
+        .resource-link {
+            color: var(--text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .resource-link:hover {
+            color: var(--primary);
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            background: var(--secondary);
+            color: white;
+        }
+
+        .resource-description {
+            font-size: 0.875rem;
+            color: var(--muted);
+            margin-top: 0.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .language-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 1.5rem 1rem;
+            }
+            .language-card {
+                margin: 0.5rem;
+            }
+        }
+
+        footer {
+            background: var(--card);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Global Language Learning Hub</h1>
+        <p class="subtitle">Free Resources for Learning World Languages</p>
+    </header>
+
+    <main class="container">
+        <div class="language-grid">
+<!-- European Languages -->
+            <div class="language-card">
+                <h2 class="language-title">French</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="https://apprendre.tv5monde.com" class="resource-link">
+                            TV5MONDE
+                            <span class="badge">Official</span>
+                        </a>
+                        <p class="resource-description">Official French language learning platform with rich multimedia content</p>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.francaisfacile.com" class="resource-link">
+                            Français Facile
+                            <span class="badge">Free</span>
+                        </a>
+                        <p class="resource-description">Comprehensive French learning resources and exercises</p>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.youtube.com/user/learnfrenchwithalexa" class="resource-link">
+                            Learn French with Alexa
+                            <span class="badge">YouTube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="language-card">
+                <h2 class="language-title">German</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="https://www.deutschakademie.de/online-deutschkurs/" class="resource-link">
+                            Deutsch Akademie
+                            <span class="badge">Free</span>
+                        </a>
+                        <p class="resource-description">Online German grammar courses and exercises</p>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://learngerman.dw.com" class="resource-link">
+                            Deutsche Welle
+                            <span class="badge">Official</span>
+                        </a>
+                        <p class="resource-description">Professional German courses from Deutsche Welle</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="language-card">
+                <h2 class="language-title">Spanish</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="https://www.spanishdict.com" class="resource-link">
+                            SpanishDict
+                            <span class="badge">Free</span>
+                        </a>
+                        <p class="resource-description">Popular Spanish-English dictionary and learning platform</p>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.youtube.com/user/ButterflySpanishola" class="resource-link">
+                            Butterfly Spanish
+                            <span class="badge">YouTube</span>
+                        </a>
+                        <p class="resource-description">Fun and engaging Spanish tutorials</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="language-card">
+                <h2 class="language-title">Italian</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="https://www.oneworlditaliano.com" class="resource-link">
+                            One World Italiano
+                            <span class="badge">Free</span>
+                        </a>
+                        <p class="resource-description">Free Italian courses and exercises</p>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.youtube.com/c/LearnAmo" class="resource-link">
+                            LearnAmo
+                            <span class="badge">YouTube</span>
+                        </a>
+                        <p class="resource-description">Modern Italian language learning channel</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Nordic Languages -->
+            <div class="language-card">
+                <h2 class="language-title">Swedish</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="https://www.digitalasparet.se" class="resource-link">
+                            Digitala Spåret
+                            <span class="badge">Official</span>
+                        </a>
+                        <p class="resource-description">Official Swedish language learning platform for immigrants</p>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.swedishpod101.com" class="resource-link">
+                            SwedishPod101
+                            <span class="badge">Free/Premium</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="language-card">
+                <h2 class="language-title">Dutch</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="https://www.dutchgrammar.com" class="resource-link">
+                            DutchGrammar.com
+                            <span class="badge">Free</span>
+                        </a>
+                        <p class="resource-description">Detailed Dutch grammar learning website</p>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.youtube.com/user/learndutchorg" class="resource-link">
+                            Learn Dutch with Bart de Pau
+                            <span class="badge">YouTube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- East Asian Languages -->
+            <div class="language-card">
+                <h2 class="language-title">Japanese</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="https://www3.nhk.or.jp/nhkworld/en/learnjapanese/" class="resource-link">
+                            NHK World Easy Japanese
+                            <span class="badge">Official</span>
+                        </a>
+                        <p class="resource-description">Free Japanese lessons from Japan's national broadcaster</p>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.japanesepod101.com" class="resource-link">
+                            JapanesePod101
+                            <span class="badge">Free/Premium</span>
+                        </a>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.youtube.com/c/JapaneseAmiWithMisa" class="resource-link">
+                            Learn Japanese with Misa
+                            <span class="badge">YouTube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="language-card">
+                <h2 class="language-title">Korean</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="https://talktomeinkorean.com" class="resource-link">
+                            Talk To Me In Korean
+                            <span class="badge">Free/Premium</span>
+                        </a>
+                        <p class="resource-description">Popular Korean learning platform with structured lessons</p>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.youtube.com/c/GOBILLYKOREAN" class="resource-link">
+                            GO! Billy Korean
+                            <span class="badge">YouTube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="language-card">
+                <h2 class="language-title">Chinese</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="http://www.chinese.cn" class="resource-link">
+                            Confucius Institute Online
+                            <span class="badge">Official</span>
+                        </a>
+                        <p class="resource-description">Official Chinese learning platform</p>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.yoyochinese.com" class="resource-link">
+                            Yoyo Chinese
+                            <span class="badge">Free/Premium</span>
+                        </a>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.chineseclass101.com" class="resource-link">
+                            ChineseClass101
+                            <span class="badge">Free/Premium</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Middle Eastern Languages -->
+            <div class="language-card">
+                <h2 class="language-title">Arabic</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="https://www.madinaharabic.com" class="resource-link">
+                            Madinah Arabic
+                            <span class="badge">Free</span>
+                        </a>
+                        <p class="resource-description">Standard Arabic courses for beginners</p>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.arabicpod101.com" class="resource-link">
+                            ArabicPod101
+                            <span class="badge">Free/Premium</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- South Asian Languages -->
+            <div class="language-card">
+                <h2 class="language-title">Hindi</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="https://www.hindipod101.com" class="resource-link">
+                            HindiPod101
+                            <span class="badge">Free/Premium</span>
+                        </a>
+                        <p class="resource-description">Comprehensive Hindi learning platform</p>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.learning-hindi.com" class="resource-link">
+                            Learning Hindi
+                            <span class="badge">Free</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Southeast Asian Languages -->
+            <div class="language-card">
+                <h2 class="language-title">Indonesian</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="https://www.indonesianpod101.com" class="resource-link">
+                            IndonesianPod101
+                            <span class="badge">Free/Premium</span>
+                        </a>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.seasite.niu.edu/Indonesian" class="resource-link">
+                            SEAsite Indonesian
+                            <span class="badge">Free</span>
+                        </a>
+                        <p class="resource-description">Academic Indonesian learning resources</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="language-card">
+                <h2 class="language-title">Malay</h2>
+                <ul class="resource-list">
+                    <li class="resource-item">
+                        <a href="https://www.learn-malay-online.com" class="resource-link">
+                            Learn Malay Online
+                            <span class="badge">Free</span>
+                        </a>
+                    </li>
+                    <li class="resource-item">
+                        <a href="https://www.malaypod101.com" class="resource-link">
+                            MalayPod101
+                            <span class="badge">Free/Premium</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Global Language Learning Hub. All resources are linked to their respective owners.</p>
+    </footer>
+</body>
+</html>
